@@ -29,6 +29,7 @@ they're listed both here and in the code.
 * Create your animals. Check out the migration in `db/migrate`. When
   you've completed this correctly, `spec/models/animal_spec.rb` should
 pass
+  * you have to have your animals backed by a db.
   * during development, you'll have to db:rollback db:migrate to re-run
     your migrations until they're correct
 

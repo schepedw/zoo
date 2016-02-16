@@ -23,7 +23,7 @@ describe Visitor do
       end
 
       it 'knows its favorite animal' do
-        expect(subject.favorite_animal).to_eql favorite_animal
+        expect(subject.favorite_animal).to eql favorite_animal
       end
     end
   end
