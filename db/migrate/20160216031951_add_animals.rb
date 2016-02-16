@@ -1,15 +1,17 @@
 class AddAnimals < ActiveRecord::Migration
   #TODO 2
   def up
-    # Animal would probably just be one class, and there'd different types of animals
-    # But doing that would be easy.
-    #
-    # Take a look at etc/animals.yml and spec/models/animal_spec.rb before you write any code
-    #
-    # I won't tell you how to structure your table(s)
-    # There are multiple ways to skin this cat
+    AppConfig.animals.each do |animal|
+      create_table animal.pluralize do |t|
+        t.string :animal_type, default: animal
+        t.timestamps
+      end
+    end
   end
 
   def down
+    AppConfig.animals.each do |animal|
+      drop_table animal.pluralize
+    end
   end
 end
