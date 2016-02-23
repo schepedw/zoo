@@ -11,9 +11,74 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20160216202033) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "alligators", force: :cascade do |t|
+    t.string "type"
+  end
+
+  create_table "animals", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "bears", force: :cascade do |t|
+    t.string "type"
+  end
+
+  create_table "elephants", force: :cascade do |t|
+    t.string "type"
+  end
+
+  create_table "giraffes", force: :cascade do |t|
+    t.string "type"
+  end
+
+  create_table "hippos", force: :cascade do |t|
+    t.string "type"
+  end
+
+  create_table "hyenas", force: :cascade do |t|
+    t.string "type"
+  end
+
+  create_table "iguanas", force: :cascade do |t|
+    t.string "type"
+  end
+
+  create_table "lions", force: :cascade do |t|
+    t.string "type"
+  end
+
+  create_table "orangutans", force: :cascade do |t|
+    t.string "type"
+  end
+
+  create_table "pandas", force: :cascade do |t|
+    t.string "type"
+  end
+
+  create_table "scorpions", force: :cascade do |t|
+    t.string "type"
+  end
+
+  create_table "tigers", force: :cascade do |t|
+    t.string "type"
+  end
+
+  create_table "turtles", force: :cascade do |t|
+    t.string "type"
+  end
+
+  create_table "whales", force: :cascade do |t|
+    t.string "type"
+  end
+
+  create_table "zebras", force: :cascade do |t|
+    t.string "type"
+  end
 
 end
